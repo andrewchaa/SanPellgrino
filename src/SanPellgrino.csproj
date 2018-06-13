@@ -3,10 +3,11 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SanPellgrino</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Andrew Chaa</Authors>
     <AssemblyName>SanPellgrino</AssemblyName>
     <RootNamespace>SanPellgrino</RootNamespace>
+    <Description>A collection of useful helper extension methods</Description>
     <PackageProjectUrl>https://github.com/andrewchaa/sanpellgrino</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/andrewchaa/sanpellgrino/master/src/icon.jpeg</PackageIconUrl>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
