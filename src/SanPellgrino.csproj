@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SanPellgrino</PackageId>
-    <Version>0.1.3</Version>
+    <Version>0.1.7</Version>
     <Authors>Andrew Chaa</Authors>
     <AssemblyName>SanPellgrino</AssemblyName>
     <RootNamespace>SanPellgrino</RootNamespace>
@@ -13,8 +13,4 @@
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageTags>Extension Methods, Helper Methods</PackageTags>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="FunctionalWay" Version="0.4.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-  </ItemGroup>
 </Project>

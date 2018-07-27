@@ -6,7 +6,7 @@ namespace SanPellgrino
     {
         public static T To<T>(this string value) where T : struct
         {
-            return Enum.Parse<T>(value, true);
+            return (T)Enum.Parse(typeof(T), value, true);
         }
 
         public static string ToLowerString(this Enum value)

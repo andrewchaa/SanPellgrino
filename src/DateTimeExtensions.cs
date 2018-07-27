@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Globalization;
-using FunctionalWay.Extensions;
 
 namespace SanPellgrino
 {
@@ -17,7 +16,7 @@ namespace SanPellgrino
 
         public static DateTime ToUnspecified(this DateTime dateTime)
         {
-            return dateTime.Map(d => DateTime.SpecifyKind(d, DateTimeKind.Unspecified));
+            return DateTime.SpecifyKind(dateTime, DateTimeKind.Unspecified);
         }
 
         public static TimeSpan Seconds(this int second)
