@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SanPellgrino
 {
@@ -23,6 +25,22 @@ namespace SanPellgrino
         public static bool IsOneOf<T>(this T element, IEnumerable<T> list)
         {
             return list.Contains(element);
+        }
+
+        public static void ForEach<T>(this IEnumerable<T> ls, Action<T> action)
+        {
+            foreach (var l in ls)
+            {
+                action(l);
+            }
+        }
+
+        public static async Task ForEachAsync<T>(this IEnumerable<T> ls, Func<T, Task> action)
+        {
+            foreach (var l in ls)
+            {
+                await action(l);
+            }
         }
 
     }
