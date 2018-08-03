@@ -5,6 +5,8 @@ a collection of helper extension methods
 
 ### ForEach
 
+foreach in linq-style
+
 ```csharp
 await ownEvents
     .Union(overridableEvents)
