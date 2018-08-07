@@ -4,6 +4,20 @@ a collection of helper extension methods
 * [ForEach](#foreach)
 * [ToArray](#toarray)
 
+### ForEach
+
+foreach in linq-style
+
+```csharp
+await ownEvents
+    .Union(overridableEvents)
+    .Union(allRestaurantEvents)
+    .ForEachAsync(async e => await _mediator.Send(new ExcludeRestaurantsFromEventCommand(Tenant, e.EventId, RestaurantId.Id.ToString(),
+        requesterUserRole, requester))
+    );
+
+```
+
 ### ToArray
 
 Convert T to an IEnumerable<T>
@@ -17,18 +31,4 @@ await _mediator.Send(
         requester
         )
     );
-```
-
-### ForEach
-
-foreach in linq-style
-
-```csharp
-await ownEvents
-    .Union(overridableEvents)
-    .Union(allRestaurantEvents)
-    .ForEachAsync(async e => await _mediator.Send(new ExcludeRestaurantsFromEventCommand(Tenant, e.EventId, RestaurantId.Id.ToString(),
-        requesterUserRole, requester))
-    );
-
 ```
