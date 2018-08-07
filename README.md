@@ -2,6 +2,22 @@
 a collection of helper extension methods
 
 * [ForEach](#foreach)
+* [ToArray](#toarray)
+
+### ToArray
+
+Convert T to an IEnumerable<T>
+
+```csharp
+await _mediator.Send(
+    new ExcludeRestaurantsFromEventCommand(Tenant, 
+        offlineEvent.EventId, 
+        RestaurantId.ToArray(),
+        requesterUserRole, 
+        requester
+        )
+    );
+```
 
 ### ForEach
 
