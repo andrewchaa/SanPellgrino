@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SanPellgrino</PackageId>
-    <Version>0.1.9</Version>
+    <Version>0.2.2</Version>
     <Authors>Andrew Chaa</Authors>
     <AssemblyName>SanPellgrino</AssemblyName>
     <RootNamespace>SanPellgrino</RootNamespace>

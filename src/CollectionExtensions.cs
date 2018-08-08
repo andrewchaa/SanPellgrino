@@ -12,11 +12,26 @@ namespace SanPellgrino
             return string.Join(",", list);
         }
 
-        public static IEnumerable<int> ToListFromCsv<T>(this string csv)
+        public static IEnumerable<int> ToListFromCsv(this string csv)
         {
-            return csv.Split(',').Select(int.Parse);
+            return string.IsNullOrEmpty(csv) 
+                ? new List<int>()
+                : csv.Split(',').Select(int.Parse);
         }
-        
+
+        public static IEnumerable<T> ToListFromCsv<T>(this string csv, Func<string, T> func)
+        {
+            return string.IsNullOrEmpty(csv) 
+                ? new List<T>() 
+                : csv.Split(',').Select(func);
+        }
+
+        public static IEnumerable<T> ToArray<T>(this T element)
+        {
+            return new[] {element};
+        }
+
+
         public static bool Empty<T>(this IEnumerable<T> list)
         {
             return !list.Any();
