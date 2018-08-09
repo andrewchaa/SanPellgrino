@@ -1,4 +1,8 @@
 # SanPellgrino
+
+[![NuGet](https://buildstats.info/nuget/SanPellgrino)](https://www.nuget.org/packages/SanPellgrino/)
+
+
 a collection of helper extension methods
 
 * [ForEach](#foreach)
