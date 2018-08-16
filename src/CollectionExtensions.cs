@@ -31,13 +31,12 @@ namespace SanPellgrino
             return new[] {element};
         }
 
-
         public static bool Empty<T>(this IEnumerable<T> list)
         {
             return !list.Any();
         }
 
-        public static bool IsOneOf<T>(this T element, IEnumerable<T> list)
+        public static bool IsOneOf<T>(this T element, params T[] list)
         {
             return list.Contains(element);
         }
