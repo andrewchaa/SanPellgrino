@@ -41,7 +41,7 @@ namespace SanPellgrino
             return list.Contains(element);
         }
 
-        public static void ForEach<T>(this IEnumerable<T> ls, Action<T> action)
+        public static void Each<T>(this IEnumerable<T> ls, Action<T> action)
         {
             foreach (var l in ls)
             {
