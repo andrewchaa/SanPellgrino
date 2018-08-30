@@ -24,6 +24,16 @@ namespace SanPellgrino
             return TimeSpan.FromSeconds(second);
         }
 
+        public static TimeSpan Hours(this int hours)
+        {
+            return TimeSpan.FromHours(hours);
+        }
+
+        public static TimeSpan Minutes(this int minutes)
+        {
+            return TimeSpan.FromMinutes(minutes);
+        }
+
         public static DateTime TrimToSeconds(this DateTime dateTime)
         {
             return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, dateTime.Hour, dateTime.Minute, dateTime.Second);
