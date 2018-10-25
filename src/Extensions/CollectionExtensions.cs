@@ -41,7 +41,7 @@ namespace SanPellgrino
             return list.Contains(element);
         }
 
-        public static void Each<T>(this IEnumerable<T> ls, Action<T> action)
+        public static void ForEach<T>(this IEnumerable<T> ls, Action<T> action)
         {
             foreach (var l in ls)
             {
@@ -49,7 +49,7 @@ namespace SanPellgrino
             }
         }
 
-        public static async Task EachAsync<T>(this IEnumerable<T> ls, Func<T, Task> action)
+        public static async Task ForEachAsync<T>(this IEnumerable<T> ls, Func<T, Task> action)
         {
             foreach (var l in ls)
             {
