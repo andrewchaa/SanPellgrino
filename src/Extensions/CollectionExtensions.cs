@@ -49,7 +49,7 @@ namespace SanPellgrino
             }
         }
 
-        public static async Task ForEachAsync<T>(this IEnumerable<T> ls, Func<T, Task> action)
+        public static async Task EachAsync<T>(this IEnumerable<T> ls, Func<T, Task> action)
         {
             foreach (var l in ls)
             {
