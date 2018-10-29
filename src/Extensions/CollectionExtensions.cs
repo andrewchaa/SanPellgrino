@@ -41,6 +41,11 @@ namespace SanPellgrino
             return list.Contains(element);
         }
 
+        public static bool IsNotOneOf<T>(this T element, params T[] list)
+        {
+            return !list.Contains(element);
+        }
+
         public static void ForEach<T>(this IEnumerable<T> ls, Action<T> action)
         {
             foreach (var l in ls)
