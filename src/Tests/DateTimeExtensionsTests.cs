@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Tests
 {
-    public class DateTimeTests
+    public class DateTimeExtensionsTests
     {
         [Fact]
         public void MinutesTest()
