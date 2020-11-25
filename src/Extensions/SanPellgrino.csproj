@@ -1,16 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.1;net45;net46</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>SanPellgrino</PackageId>
-    <Version>0.3.3</Version>
+    <Version>0.4.0</Version>
     <Authors>Andrew Chaa</Authors>
     <AssemblyName>SanPellgrino</AssemblyName>
     <RootNamespace>SanPellgrino</RootNamespace>
-    <Description>A collection of useful helper extension methods</Description>
+    <Description>A collection of useful extension methods</Description>
     <PackageProjectUrl>https://github.com/andrewchaa/sanpellgrino</PackageProjectUrl>
-    <PackageIconUrl>https://raw.githubusercontent.com/andrewchaa/sanpellgrino/master/src/icon.jpeg</PackageIconUrl>
-    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/andrewchaa/SanPellgrino/master/src/Extensions/icon.jpeg</PackageIconUrl>
+    <PackageIcon>icon.jpeg</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageTags>Extension Methods, Helper Methods</PackageTags>
   </PropertyGroup>
   <ItemGroup>
@@ -20,5 +21,6 @@
     <Reference Include="xunit.core, Version=2.4.0.4049, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c">
       <HintPath>..\..\..\.nuget\packages\xunit.extensibility.core\2.4.0\lib\netstandard2.0\xunit.core.dll</HintPath>
     </Reference>
+    <None Include=".\icon.jpeg" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

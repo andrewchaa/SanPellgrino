@@ -7,9 +7,9 @@ namespace SanPellgrino
 {
     public static class CollectionExtensions
     {
-        public static string ToCsvString<T>(this IEnumerable<T> list)
+        public static string ToCsvString<T>(this IEnumerable<T> list, bool noSpace = false)
         {
-            return string.Join(",", list);
+            return string.Join(", ", list);
         }
 
         public static IEnumerable<int> ToListFromCsv(this string csv)
@@ -60,6 +60,13 @@ namespace SanPellgrino
             {
                 await action(l);
             }
+        }
+
+        public static IEnumerable<TR> DistinctBy<TR, TI>(this IEnumerable<TR> list, Func<TR, TI> keySelector)
+        {
+            return list
+                .GroupBy(keySelector)
+                .Select(x => x.First());
         }
 
     }
