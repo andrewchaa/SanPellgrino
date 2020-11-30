@@ -41,5 +41,11 @@ namespace Tests
             Assert.Equal(3, examples.Count);
             Assert.Equal(2, distinctExamples.Count());
         }
+
+        [Fact]
+        public void Empty_shoud_be_true_if_the_collection_is_empty()
+        {
+            Assert.True(new List<string>().Empty());
+        }
     }
 }
